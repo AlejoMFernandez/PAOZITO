@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pãozito · pão delícia recheado, feito na Bahia</title>
+<meta name="description" content="Pãozito: pão delícia recheado em Salvador. Kits de 5, 8 ou 15 pãozitos doces, especiais ou tradicionais. Lojas no Pelourinho, Pituba e Patamares.">
+<meta name="theme-color" content="#1E3668">
+<meta property="og:title" content="Pãozito · feito na Bahia">
+<meta property="og:description" content="Pão delícia recheado em Salvador. Monta seu saquinho!">
+<meta property="og:image" content="img/fotos/bolsa-rua.webp">
+<link rel="icon" type="image/png" sizes="192x192" href="img/marca/favicon.png?v=2">
+<link rel="icon" type="image/png" sizes="32x32" href="img/marca/favicon-32.png?v=2">
+<link rel="apple-touch-icon" href="img/marca/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800;900&family=Permanent+Marker&family=Just+Another+Hand&display=swap">
+<link rel="stylesheet" href="css/styles.css?v=3">
+</head>
+<body>
+
+<a class="skip" href="#sabores">Pular para os sabores</a>
+
+<!-- ============ HEADER ============ -->
+<header class="top">
+  <a class="top__logo" href="#" aria-label="Pãozito, início"><img src="img/marca/logotipo-navy.webp" alt="Pãozito" width="1280" height="540"></a>
+  <nav class="top__nav" aria-label="Principal">
+    <a href="#sabores">sabores</a>
+    <a href="#saquinho">monta seu kit</a>
+    <a href="#cardapio">cardápio</a>
+    <a href="#lojas">lojas</a>
+    <a class="btn btn--paper" href="https://wa.me/5571996077121" target="_blank" rel="noopener">pedir no whatsapp</a>
+  </nav>
+  <button class="top__burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+  </button>
+</header>
+
+<div class="mmenu" id="mobile-menu" hidden>
+  <button class="mmenu__close" type="button" aria-label="Fechar menu">
+    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 3l10 10M13 3L3 13"/></svg>
+  </button>
+  <a href="#sabores">SABORES</a>
+  <a href="#saquinho">MONTA SEU KIT</a>
+  <a href="#galeria">POR AÍ</a>
+  <a href="#cardapio">CARDÁPIO</a>
+  <a href="#lojas">LOJAS</a>
+  <a class="btn btn--red" href="https://wa.me/5571996077121" target="_blank" rel="noopener">pedir no whatsapp</a>
+  <img src="img/marca/mascota-corazon-white.webp" alt="" width="1280" height="1129">
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-label="Pãozito">
+  <div class="hero__photo">
+    <img class="hero__img" src="img/fotos/bolsa-rua.webp" alt="Sacola do Pãozito numa rua do Centro de Salvador" width="900" height="1599">
+    <figure class="polaroid hero__polaroid" data-reveal>
+      <img src="img/fotos/placa.webp" alt="Placa do Pãozito na fachada" width="900" height="1599">
+    </figure>
+    <p class="marker hero__marker" aria-hidden="true">direto do Centro!</p>
+  </div>
+  <div class="hero__text">
+    <p class="eyebrow">Salvador · Bahia</p>
+    <h1 class="hand hero__title">LEVA UM<br>SAQUINHO<br>PRA CASA</h1>
+    <p class="hero__lead">Pão delícia recheado, quentinho. Kits de 5, 8 ou 15 pãozitos: doces, especiais ou o tradicional de creme de queijo.</p>
+    <div class="row">
+      <a class="btn btn--navy" href="#saquinho">monta seu saquinho</a>
+      <a class="btn btn--ghost" href="#lojas">nossas lojas</a>
+    </div>
+  </div>
+  <img class="sticker hero__sticker" src="img/sabores/nutella.webp" alt="" width="860" height="598" data-reveal>
+</section>
+
+<!-- ============ FITA ============ -->
+<div class="tape tape--red" aria-hidden="true">
+  <div class="tape__track">
+    <span>feito na Bahia</span><span>✱</span><span>feito na Bahia</span><span>✱</span><span>feito na Bahia</span><span>✱</span><span>feito na Bahia</span><span>✱</span>
+    <span>feito na Bahia</span><span>✱</span><span>feito na Bahia</span><span>✱</span><span>feito na Bahia</span><span>✱</span><span>feito na Bahia</span><span>✱</span>
+  </div>
+</div>
+
+<!-- ============ SABORES ============ -->
+<section class="flavors" id="sabores">
+  <div class="flavors__head wrap">
+    <div>
+      <h2 class="hand h-xl">OS PÃOZITOS</h2>
+      <p class="flavors__hint"><span class="only-fine">passe o mouse</span><span class="only-touch">toque</span> e empurre um sabor pro lado</p>
+    </div>
+    <img class="flavors__masc" src="img/marca/mascota-corazon-navy.webp" alt="" width="1280" height="1129">
+  </div>
+  <ul class="stack" id="stack"><!-- montado por js/main.js --></ul>
+</section>
+
+<!-- ============ SAQUINHO ============ -->
+<section class="kit" id="saquinho">
+  <div class="wave wave--top-paper" aria-hidden="true"></div>
+  <div class="kit__side">
+    <h2 class="kit__title"><span>monta</span><span>seu saquinho</span></h2>
+    <p class="kit__sub">Arrasta os sabores pro saquinho <span class="only-touch">(ou toca neles)</span></p>
+    <div class="kit__pills" role="group" aria-label="Tamanho do kit">
+      <span class="kit__pills-label">kit de</span>
+      <button type="button" class="pill" data-kit="5">5</button>
+      <button type="button" class="pill is-on" data-kit="8">8</button>
+      <button type="button" class="pill" data-kit="15">15</button>
+    </div>
+    <div class="kit__count">
+      <p><strong id="kit-count">0</strong> <span>/ <span id="kit-size">8</span></span></p>
+      <p id="kit-price">R$ —</p>
+    </div>
+    <div class="kit__bar"><span id="kit-bar"></span></div>
+    <p class="kit__summary" id="kit-summary" aria-live="polite">Seu saquinho está vazio.</p>
+    <div class="row">
+      <a class="btn btn--red is-disabled" id="kit-cta" href="#" aria-disabled="true">faltam 8</a>
+      <button type="button" class="btn btn--ghost-paper" id="kit-clear">esvaziar</button>
+    </div>
+    <p class="kit__note">Tradicional: 5 por R$ 20 · 8 por R$ 32 · 15 por R$ 60.<br>Especial e doce: 5 por R$ 30 · 8 por R$ 48 · 15 por R$ 90.<br>Kit misto com especial ou doce sai no preço especial.</p>
+  </div>
+  <div class="kit__tray" id="kit-tray" aria-label="Sabores para adicionar"><!-- js --></div>
+  <div class="kit__stage">
+    <div class="bag" id="bag">
+      <div class="bag__back"></div>
+      <div class="bag__items" id="bag-items"></div>
+      <div class="bag__front">
+        <img src="img/marca/logotipo-navy.webp" alt="" width="1280" height="540">
+        <img src="img/marca/logotipo-navy.webp" alt="" width="1280" height="540">
+        <img src="img/marca/logotipo-navy.webp" alt="" width="1280" height="540">
+        <span class="marker">feito na Bahia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FITA 2 ============ -->
+<div class="tape tape--blue" aria-hidden="true">
+  <div class="tape__track tape__track--rev">
+    <span>pão delícia recheado</span><span class="light">quentinho</span><span>pão delícia recheado</span><span class="light">quentinho</span><span>pão delícia recheado</span><span class="light">quentinho</span>
+    <span>pão delícia recheado</span><span class="light">quentinho</span><span>pão delícia recheado</span><span class="light">quentinho</span><span>pão delícia recheado</span><span class="light">quentinho</span>
+  </div>
+</div>
+
+<!-- ============ GALERIA ============ -->
+<section class="gallery" id="galeria">
+  <div class="gallery__head wrap">
+    <h2 class="hand h-xl">O PÃOZITO POR AÍ</h2>
+    <a class="marker gallery__ig" href="https://www.instagram.com/divinopaozito/" target="_blank" rel="noopener">@divinopaozito</a>
+  </div>
+  <div class="gallery__grid wrap">
+    <figure class="g g--a" data-reveal><img src="img/fotos/prato-redvelvet.webp" alt="Pãozito red velvet no prato" width="1100" height="656" loading="lazy"><figcaption class="marker">olha esse red velvet</figcaption></figure>
+    <figure class="g g--b polaroid" data-reveal><img src="img/fotos/bolsa-loja.webp" alt="Sacola do Pãozito na mesa da loja" width="787" height="1400" loading="lazy"><figcaption class="marker">o saquinho</figcaption></figure>
+    <figure class="g g--c" data-reveal><img src="img/fotos/prato-nutella.webp" alt="Pãozito de Nutella no prato" width="1100" height="656" loading="lazy"></figure>
+    <figure class="g g--d polaroid" data-reveal><img src="img/fotos/porta-guardanapo.webp" alt="Porta-guardanapo com o mascote do Pãozito" width="900" height="1200" loading="lazy"><figcaption class="marker">até o porta-guardanapo</figcaption></figure>
+    <figure class="g g--e" data-reveal><img src="img/fotos/prato-reino.webp" alt="Pãozito de queijo reino no prato" width="1100" height="656" loading="lazy"></figure>
+    <figure class="g g--f" data-reveal><img src="img/fotos/prato-remeuejulieta.webp" alt="Pãozito romeu e julieta no prato" width="1100" height="656" loading="lazy"></figure>
+    <figure class="g g--g" data-reveal><img src="img/fotos/prato-dulcedeleite.webp" alt="Pãozito de doce de leite no prato" width="1100" height="656" loading="lazy"></figure>
+    <img class="sticker gallery__sticker" src="img/sabores/doce-de-leite.webp" alt="" width="863" height="608" loading="lazy" data-reveal>
+  </div>
+  <div class="wrap gallery__foot"><a class="btn btn--ghost" href="https://www.instagram.com/divinopaozito/" target="_blank" rel="noopener">ver no instagram</a></div>
+</section>
+
+<!-- ============ CARDÁPIO ============ -->
+<section class="menu" id="cardapio">
+  <div class="wave wave--top-paper" aria-hidden="true"></div>
+  <div class="menu__head wrap">
+    <div>
+      <h2 class="hand h-xl">O CARDÁPIO TODO</h2>
+      <p class="menu__sub">Loja Pelourinho · atualizado junho 2026</p>
+    </div>
+    <div class="menu__tabs" role="tablist" aria-label="Cardápio">
+      <button type="button" role="tab" class="tab is-on" aria-selected="true" data-tab="comer">pra comer</button>
+      <button type="button" role="tab" class="tab" aria-selected="false" data-tab="beber">pra beber</button>
+      <a class="menu__pdf" href="cardapio-pelourinho.pdf" target="_blank" rel="noopener">baixar PDF</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="sheet" role="tabpanel">
+      <img class="sheet__masc" id="sheet-masc" src="img/marca/mascota-corazon-sticker.webp" alt="" width="1258" height="1107">
+      <div class="sheet__cols" id="sheet"><!-- js --></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOJAS ============ -->
+<section class="stores" id="lojas">
+  <div class="wave wave--top-blue" aria-hidden="true"></div>
+  <div class="stores__head wrap">
+    <h2 class="hand h-xl">3 LOJAS, 1 PÃOZITO</h2>
+    <p class="marker stores__marker">vem buscar!</p>
+  </div>
+  <div class="stores__grid wrap">
+    <article class="store" data-reveal>
+      <div class="store__top store__top--navy"><img src="img/marca/isotipo-white.webp" alt="" width="1280" height="1126" loading="lazy"></div>
+      <div class="store__body">
+        <h3 class="hand">PELOURINHO</h3>
+        <p>R. da Misericórdia, 3<br>Centro Histórico</p>
+        <p class="store__hours">[HORÁRIO]</p>
+        <a class="btn btn--ghost btn--block" href="https://www.google.com/maps/search/?api=1&query=Rua%20da%20Miseric%C3%B3rdia%2C%203%2C%20Salvador%20BA" target="_blank" rel="noopener">abrir no mapa</a>
+      </div>
+    </article>
+    <article class="store store--b" data-reveal>
+      <div class="store__top store__top--blue"><img src="img/marca/mascota-corazon-white.webp" alt="" width="1280" height="1129" loading="lazy"></div>
+      <div class="store__body">
+        <h3 class="hand">PITUBA</h3>
+        <p>R. das Hortênsias, 478<br>Pituba</p>
+        <p class="store__hours">[HORÁRIO]</p>
+        <a class="btn btn--ghost btn--block" href="https://www.google.com/maps/search/?api=1&query=Rua%20das%20Hort%C3%AAnsias%2C%20478%2C%20Pituba%2C%20Salvador%20BA" target="_blank" rel="noopener">abrir no mapa</a>
+      </div>
+    </article>
+    <article class="store store--c" data-reveal>
+      <div class="store__top store__top--red"><img src="img/marca/mascota-comiendo-white.webp" alt="" width="1280" height="767" loading="lazy"></div>
+      <div class="store__body">
+        <h3 class="hand">PATAMARES</h3>
+        <p>R. Bicuíba, 630, Colina A<br>Patamares</p>
+        <p class="store__hours">[HORÁRIO]</p>
+        <a class="btn btn--ghost btn--block" href="https://www.google.com/maps/search/?api=1&query=Rua%20Bicu%C3%ADba%2C%20630%2C%20Patamares%2C%20Salvador%20BA" target="_blank" rel="noopener">abrir no mapa</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wave wave--top-paper" aria-hidden="true"></div>
+  <div class="foot__inner wrap">
+    <div class="foot__stack" aria-hidden="true">
+      <img src="img/marca/logotipo-white.webp" alt="" width="1280" height="540" loading="lazy">
+      <img src="img/marca/logotipo-white.webp" alt="" width="1280" height="540" loading="lazy">
+      <img src="img/marca/logotipo-white.webp" alt="" width="1280" height="540" loading="lazy">
+      <span class="marker foot__bye">até já!</span>
+    </div>
+    <div class="foot__info">
+      <img class="foot__masc" src="img/marca/mascota-comiendo-white.webp" alt="" width="1280" height="767" loading="lazy">
+      <div class="foot__cols">
+        <div>
+          <p class="foot__label">fala com a gente</p>
+          <a href="https://wa.me/5571996077121" target="_blank" rel="noopener">WhatsApp 71 99607-7121</a>
+          <a href="https://www.instagram.com/divinopaozito/" target="_blank" rel="noopener">@divinopaozito</a>
+        </div>
+        <div>
+          <p class="foot__label">lojas</p>
+          <p>Pelourinho · R. da Misericórdia, 3<br>Pituba · R. das Hortênsias, 478<br>Patamares · R. Bicuíba, 630</p>
+        </div>
+      </div>
+      <p class="foot__small">Pãozito · feito na Bahia</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MASCOTE ============ -->
+<div class="pal" id="pal">
+  <p class="pal__say marker" id="pal-say" aria-live="polite"></p>
+  <button type="button" class="pal__hint marker" id="pal-hint">pergunta pra mim!</button>
+  <button type="button" class="pal__body" id="pal-body" aria-label="Falar com o Pãozito" aria-expanded="false" aria-controls="chat">
+    <span class="pal__anim">
+      <img class="pal__img" src="img/marca/isotipo-sticker-sem-olhos.webp" alt="" width="1258" height="1104">
+      <span class="pal__eye pal__eye--l"></span>
+      <span class="pal__eye pal__eye--r"></span>
+      <span class="pal__drop"></span>
+      <span class="pal__z pal__z--1">z</span><span class="pal__z pal__z--2">z</span>
+      <img class="pal__eat" src="img/marca/mascota-comiendo-sticker.webp" alt="" width="1250" height="744">
+    </span>
+  </button>
+</div>
+
+<section class="chat" id="chat" aria-label="Perguntas para o Pãozito" hidden>
+  <div class="chat__head">
+    <img src="img/marca/isotipo-white.webp" alt="" width="1280" height="1126">
+    <div><p class="hand">PÃOZITO</p><p class="chat__status" id="chat-status">online agora</p></div>
+    <button type="button" class="chat__close" id="chat-close" aria-label="Fechar conversa">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M3 3l10 10M13 3L3 13"/></svg>
+    </button>
+  </div>
+  <div class="chat__log" id="chat-log" aria-live="polite"></div>
+  <div class="chat__chips" id="chat-chips"></div>
+</section>
+
+<img class="ghost" id="ghost" alt="" hidden>
+
+<script src="js/main.js?v=3" defer></script>
+</body>
+</html>
