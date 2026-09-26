@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800;900&family=Permanent+Marker&family=Just+Another+Hand&display=swap">
-<link rel="stylesheet" href="css/styles.css?v=3">
+<link rel="stylesheet" href="css/styles.css?v=4">
 </head>
 <body>
 
@@ -36,7 +36,7 @@
   </button>
 </header>
 
-<div class="mmenu" id="mobile-menu" hidden>
+<div class="mmenu" id="mobile-menu" aria-hidden="true" inert>
   <button class="mmenu__close" type="button" aria-label="Fechar menu">
     <svg width="20" height="20" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 3l10 10M13 3L3 13"/></svg>
   </button>
@@ -97,7 +97,7 @@
   <div class="wave wave--top-paper" aria-hidden="true"></div>
   <div class="kit__side">
     <h2 class="kit__title"><span>monta</span><span>seu saquinho</span></h2>
-    <p class="kit__sub">Arrasta os sabores pro saquinho <span class="only-touch">(ou toca neles)</span></p>
+    <p class="kit__sub"><span class="only-fine">Arrasta os sabores pro saquinho</span><span class="only-touch">Toca nos sabores pra jogar no saquinho</span></p>
     <div class="kit__pills" role="group" aria-label="Tamanho do kit">
       <span class="kit__pills-label">kit de</span>
       <button type="button" class="pill" data-kit="5">5</button>
@@ -127,6 +127,7 @@
         <img src="img/marca/logotipo-navy.webp" alt="" width="1280" height="540">
         <span class="marker">feito na Bahia</span>
       </div>
+      <span class="bag__badge" id="bag-badge" aria-hidden="true">0/8</span>
     </div>
   </div>
 </section>
@@ -278,6 +279,6 @@
 
 <img class="ghost" id="ghost" alt="" hidden>
 
-<script src="js/main.js?v=3" defer></script>
+<script src="js/main.js?v=4" defer></script>
 </body>
 </html>

@@ -37,15 +37,18 @@
      ========================================================= */
   const burger = $('.top__burger'), mmenu = $('#mobile-menu');
   const setMenu = (open) => {
-    mmenu.hidden = !open;
+    mmenu.classList.toggle('is-open', open);
+    mmenu.setAttribute('aria-hidden', String(!open));
+    mmenu.inert = !open;
     burger.setAttribute('aria-expanded', String(open));
-    document.body.style.overflow = open ? 'hidden' : '';
-    if (open) $('.mmenu__close').focus();
+    document.documentElement.classList.toggle('no-scroll', open);
+    if (open) setTimeout(() => $('.mmenu__close').focus({ preventScroll: true }), 50);
+    else burger.focus({ preventScroll: true });
   };
   burger.addEventListener('click', () => setMenu(true));
   $('.mmenu__close').addEventListener('click', () => setMenu(false));
   $$('#mobile-menu a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !mmenu.hidden) setMenu(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && mmenu.classList.contains('is-open')) setMenu(false); });
 
   /* =========================================================
      REVEAL
@@ -100,7 +103,7 @@
      ========================================================= */
   const kit = (() => {
     const bagEl = $('#bag'), itemsEl = $('#bag-items'), tray = $('#kit-tray'), ghost = $('#ghost');
-    const els = { count: $('#kit-count'), size: $('#kit-size'), price: $('#kit-price'), bar: $('#kit-bar'), sum: $('#kit-summary'), cta: $('#kit-cta') };
+    const els = { badge: $('#bag-badge'), count: $('#kit-count'), size: $('#kit-size'), price: $('#kit-price'), bar: $('#kit-bar'), sum: $('#kit-summary'), cta: $('#kit-cta') };
     let size = 8, bodies = [], raf = null, still = 0, G = null;
 
     tray.innerHTML = FLAVORS.map((f, i) => `
@@ -162,6 +165,7 @@
       bodies.forEach((b) => { tally[b.fl] = (tally[b.fl] || 0) + 1; });
       const parts = Object.keys(tally).map((k) => `${tally[k]} ${FLAVORS[k].name}`);
       els.count.textContent = n; els.size.textContent = size;
+      els.badge.textContent = `${n}/${size}`; els.badge.classList.toggle('is-full', full);
       els.price.textContent = price ? brl(price) : 'R$ —';
       els.bar.style.width = Math.min(100, (n / size) * 100) + '%';
       els.sum.textContent = parts.length ? parts.join(' · ') : 'Seu saquinho está vazio.';
@@ -187,7 +191,10 @@
         vx: (Math.random() - 0.5) * 160, vy: 0, rot: (Math.random() - 0.5) * 40, vr: (Math.random() - 0.5) * 260
       });
       update(); render(); kick();
-      if (bodies.length >= size) { pal.say('saquinho pronto!'); pal.happy(); } else pal.eatQuick(FLAVORS[fl].think);
+      if (bodies.length >= size) {
+        pal.say('saquinho pronto!'); pal.happy();
+        if (!finePointer) setTimeout(() => els.cta.scrollIntoView({ behavior: 'smooth', block: 'center' }), 500);
+      } else pal.eatQuick(FLAVORS[fl].think);
     };
 
     const setSize = (k) => {
