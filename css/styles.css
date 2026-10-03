@@ -440,3 +440,8 @@ ul{padding:0;list-style:none}
   *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
   [data-reveal]{opacity:1;transform:rotate(var(--rot,0deg))}
 }
+
+/* crédito del desarrollador */
+.credito{position:relative;z-index:2;font-size:12px;letter-spacing:.02em;text-align:center;opacity:.8;margin:36px auto 0;padding:0 16px}
+.credito a{color:inherit;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.credito a:hover{opacity:.75}
